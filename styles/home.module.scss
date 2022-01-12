@@ -1,0 +1,95 @@
+@mixin mobileAndTablet {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 60px;
+  width: 120px;
+
+  @include mobileAndTablet {
+    left: 16px;
+    width: 75px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.profiles {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  width: 100%;
+  max-width: 80%;
+  margin: auto;
+  animation: fadeIn 500ms forwards;
+
+  @include mobileAndTablet {
+    gap: 20px;
+  }
+}
+
+.profilesLabel {
+  font-size: 3.5vw;
+  color: white;
+  text-align: center;
+
+  @include mobileAndTablet {
+    font-size: 32px;
+  }
+}
+
+.profilesList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+
+  @include mobileAndTablet {
+    gap: 8px;
+  }
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  width: 192px;
+  gap: 16px;
+
+  @include mobileAndTablet {
+    width: 84px;
+    gap: 8px;
+  }
+}
+
+.profileImage {
+  border-radius: 4px;
+}
+
+.profileName {
+  color: grey;
+  font-size: 24px;
+  text-align: center;
+
+  @include mobileAndTablet {
+    font-size: 12px;
+  }
+}
