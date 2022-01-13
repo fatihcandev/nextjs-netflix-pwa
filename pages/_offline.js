@@ -1,8 +1,9 @@
+import styles from "../styles/offline.module.scss"
+
 const Offline = () => {
   return (
-    <div>
-      <span>You are offline!</span>
-      <button>Reload the page</button>
+    <div className={styles.container}>
+      <img src="/offline.png" alt="offline" />
     </div>
   )
 }
