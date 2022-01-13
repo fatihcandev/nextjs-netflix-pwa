@@ -4,8 +4,8 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "name": "Next.js Netflix PWA",
-  "short_name": "Next.js Netflix PWA",
+  "name": "Netflix",
+  "short_name": "Netflix",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
